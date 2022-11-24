@@ -133,7 +133,7 @@ module.exports = {
                     return;
                 }else{
                     if(response.length > 0 && response[0].roles == "ADMIN"){
-                        let query = "INSERT INTO department (TenMH, SoTinChi, created_at) VALUES (?, ?)"
+                        let query = "INSERT INTO department (TenMH, SoTinChi, created_at) VALUES (?, ?, ?)"
                         db.query(query, 
                             [TenMH,SoTinChi, created_at],
                             function(err, result){
