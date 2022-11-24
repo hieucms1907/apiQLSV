@@ -5,6 +5,7 @@ const authController = require('../controllers/auth.controller');
 const studentController = require('../controllers/student.controller');
 const departmentController = require('../controllers/department.controller');
 const classroomController = require('../controllers/classroom.controller');
+const subjectController = require('../controllers/subject.controller')
 
 router.post('/Authentication/Login', userController.auth)
 router.get('/Authentication/CheckToken', authController.checkToken)
@@ -27,5 +28,12 @@ router.get('/Classroom/getLists', classroomController.getAll)
 router.get('/Classroom/getByDepartment/:id', classroomController.getClassroomByDepartment)
 router.post('/Classroom/create', classroomController.createClassroom)
 router.put('/Classroom/update/:id', classroomController.updateClassroom)
+
+//subject
+router.get('/Subject/getLists', subjectController.getAll)
+router.get('/Subject/getByDepartment/:id', subjectController.getSubjectById)
+router.post('/Subject/create', subjectController.createSubject)
+router.put('/Subject/update/:id', subjectController.updateSubject)
+router.put('/Subject/delete', subjectController.deleteSubject)
 
 module.exports = router
