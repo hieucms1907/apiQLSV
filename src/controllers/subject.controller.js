@@ -255,7 +255,7 @@ module.exports = {
                             [MaMH],
                             function(err, result){
                                 if(err && result[0].length == 0){
-                                    res.status(500).json({statusCode : 500, message : "Khoa không tồn tại" })
+                                    res.status(500).json({statusCode : 500, message : "Môn học không tồn tại" })
                                 }else{
                                     db.query("DELETE subject, classroom, student FROM subject "
                                             + "WHERE subject.MaMH = ?", 
