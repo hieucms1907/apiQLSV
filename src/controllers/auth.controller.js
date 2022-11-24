@@ -25,7 +25,7 @@ module.exports = {
             return;
         }
 
-        if(token != null && tokenDecode != null){
+        if(tokenDecode != null){
             let data = {}
             data.accessToken = token
             res.status(200).json(data);
